@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MensajeriaS.A.S
 {
-    public abstract class Paquete
+    public abstract class Paquete : IPaquete
     {
         private double peso;
         private int cantidad;
@@ -39,7 +39,7 @@ namespace MensajeriaS.A.S
         public bool GetDHL() => DHL;
         public void SetDHL(bool value) => DHL = value;
 
-       
+
         public abstract double CalcularCosto();
         public string ObtenerInformacionCompleta()
         {
